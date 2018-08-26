@@ -259,6 +259,7 @@ public class MenuBuilder {
 						}
 					});
 					alert.show();
+					break;
 				} else {
 					InventoryTableBuilder.data.add(item);
 				}

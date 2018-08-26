@@ -7,18 +7,18 @@ public class InventoryItem {
 	private String itemName;
 	private int quantity;
 	private String itemDescription;
-	private LocalDate dateRecieved;
+	private LocalDate dateReceived;
 	private String itemStorageLocation;
 	private LocalDate dateEntered;
 	private String isCurrentlyInUse;
 	private String individualUsingItem;
 
-	public InventoryItem(String itemName, int quantity, String itemDescription, LocalDate dateRecieved,
+	public InventoryItem(String itemName, int quantity, String itemDescription, LocalDate dateReceived,
 			String itemStorageLocation, LocalDate dateEntered, String isCurrentlyInUse, String individualUsingItem) {
 		this.itemName = itemName;
 		this.quantity = quantity;
 		this.itemDescription = itemDescription;
-		this.dateRecieved = dateRecieved;
+		this.dateReceived = dateReceived;
 		this.itemStorageLocation = itemStorageLocation;
 		this.dateEntered = dateEntered;
 		this.isCurrentlyInUse = isCurrentlyInUse;
@@ -29,7 +29,7 @@ public class InventoryItem {
 		this.itemName = "";
 		this.quantity = 0;
 		this.itemDescription = "";
-		this.dateRecieved = LocalDate.now();
+		this.dateReceived = LocalDate.now();
 		this.itemStorageLocation = "";
 		this.dateEntered = LocalDate.now();
 		this.isCurrentlyInUse = "No";
@@ -60,12 +60,12 @@ public class InventoryItem {
 		this.itemDescription = itemDescription;
 	}
 
-	public LocalDate getDateRecieved() {
-		return dateRecieved;
+	public LocalDate getDateReceived() {
+		return dateReceived;
 	}
 
-	public void setDateRecieved(LocalDate dateRecieved) {
-		this.dateRecieved = dateRecieved;
+	public void setDateReceived(LocalDate dateReceived) {
+		this.dateReceived = dateReceived;
 	}
 
 	public String getItemStorageLocation() {

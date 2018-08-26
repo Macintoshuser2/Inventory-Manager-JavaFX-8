@@ -49,7 +49,7 @@ public class Main extends Application {
 		TextField nameField = new TextField();
 		TextField quantityField = new TextField();
 		TextField descriptionField = new TextField();
-		DatePicker dateRecievedPicker = new DatePicker();
+		DatePicker dateReceivedPicker = new DatePicker();
 		TextField itemStorageLocationField = new TextField();
 		ComboBox<String> isCurrentlyInUseComboBox = new ComboBox<String>(options);
 		TextField individualUsingItemField = new TextField();
@@ -66,20 +66,20 @@ public class Main extends Application {
 					int quantity = Integer.parseInt(quantityField.getText());
 
 					if (!nameField.getText().isEmpty() && !descriptionField.getText().isEmpty()
-							&& !dateRecievedPicker.getValue().toString().isEmpty()
+							&& !dateReceivedPicker.getValue().toString().isEmpty()
 							&& !itemStorageLocationField.getText().isEmpty()
 							&& !isCurrentlyInUseComboBox.getSelectionModel().getSelectedItem().isEmpty()) {
 						InventoryItem item = null;
 
 						if (isCurrentlyInUseComboBox.getSelectionModel().getSelectedItem().equalsIgnoreCase("Yes")) {
 							item = new InventoryItem(nameField.getText(), quantity, descriptionField.getText(),
-									dateRecievedPicker.getValue(), itemStorageLocationField.getText(), LocalDate.now(),
+									dateReceivedPicker.getValue(), itemStorageLocationField.getText(), LocalDate.now(),
 									isCurrentlyInUseComboBox.getSelectionModel().getSelectedItem(),
 									individualUsingItemField.getText());
 						} else if (isCurrentlyInUseComboBox.getSelectionModel().getSelectedItem()
 								.equalsIgnoreCase("No")) {
 							item = new InventoryItem(nameField.getText(), quantity, descriptionField.getText(),
-									dateRecievedPicker.getValue(), itemStorageLocationField.getText(), LocalDate.now(),
+									dateReceivedPicker.getValue(), itemStorageLocationField.getText(), LocalDate.now(),
 									isCurrentlyInUseComboBox.getSelectionModel().getSelectedItem(), "N/A");
 						}
 
@@ -88,7 +88,7 @@ public class Main extends Application {
 						nameField.clear();
 						quantityField.clear();
 						descriptionField.clear();
-						dateRecievedPicker.setValue(null);
+						dateReceivedPicker.setValue(null);
 						itemStorageLocationField.clear();
 						isCurrentlyInUseComboBox.getSelectionModel().clearSelection();
 						individualUsingItemField.clear();
@@ -136,8 +136,8 @@ public class Main extends Application {
 		inputs.add(quantityField, 1, 1);
 		inputs.add(new Label("Item Description: "), 0, 2);
 		inputs.add(descriptionField, 1, 2);
-		inputs.add(new Label("Date Recieved"), 0, 3);
-		inputs.add(dateRecievedPicker, 1, 3);
+		inputs.add(new Label("Date Received"), 0, 3);
+		inputs.add(dateReceivedPicker, 1, 3);
 		inputs.add(new Label("Storage Location"), 0, 4);
 		inputs.add(itemStorageLocationField, 1, 4);
 		inputs.add(new Label("Is Item in Use?"), 0, 5);
@@ -150,7 +150,7 @@ public class Main extends Application {
 			n.prefWidth(300);
 		}
 
-		dateRecievedPicker.setPrefWidth(300);
+		dateReceivedPicker.setPrefWidth(300);
 		isCurrentlyInUseComboBox.setPrefWidth(300);
 
 		inputs.setAlignment(Pos.CENTER);
@@ -160,6 +160,7 @@ public class Main extends Application {
 		root.setBottom(inputs);
 		
 		primaryStage.setScene(scene);
+		
 		primaryStage.setTitle("Inventory Manager");
 		primaryStage.show();
 	}

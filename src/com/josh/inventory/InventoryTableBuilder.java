@@ -24,7 +24,7 @@ public class InventoryTableBuilder {
 		TableColumn itemNameColumn = new TableColumn("Name");
 		TableColumn itemQuantityColumn = new TableColumn("Quantity");
 		TableColumn itemDescriptionColumn = new TableColumn("Description");
-		TableColumn dateRecievedColumn = new TableColumn("Date Recieved");
+		TableColumn dateReceivedColumn = new TableColumn("Date Received");
 		TableColumn itemStorageLocationColumn = new TableColumn("Storage Location");
 		TableColumn dateEnteredColumn = new TableColumn("Date Entered");
 		TableColumn isCurrentlyInUseColumn = new TableColumn("Being used?");
@@ -33,14 +33,14 @@ public class InventoryTableBuilder {
 		itemNameColumn.setPrefWidth(100);
 		itemQuantityColumn.setPrefWidth(100);
 		itemDescriptionColumn.setPrefWidth(100);
-		dateRecievedColumn.setPrefWidth(150);
+		dateReceivedColumn.setPrefWidth(150);
 		dateEnteredColumn.setPrefWidth(150);
 		itemStorageLocationColumn.setPrefWidth(200);
 		isCurrentlyInUseColumn.setPrefWidth(100);
 		individualUsingItemColumn.setPrefWidth(200);
 
 		inventoryTable.getColumns().addAll(itemNameColumn, itemQuantityColumn, itemDescriptionColumn,
-				dateRecievedColumn, dateEnteredColumn, itemStorageLocationColumn, isCurrentlyInUseColumn,
+				dateReceivedColumn, dateEnteredColumn, itemStorageLocationColumn, isCurrentlyInUseColumn,
 				individualUsingItemColumn);
 
 		pane.setCenter(inventoryTable);
@@ -54,7 +54,7 @@ public class InventoryTableBuilder {
 		itemNameColumn.setCellValueFactory(new PropertyValueFactory<InventoryItem, String>("itemName"));
 		itemQuantityColumn.setCellValueFactory(new PropertyValueFactory<InventoryItem, String>("quantity"));
 		itemDescriptionColumn.setCellValueFactory(new PropertyValueFactory<InventoryItem, String>("itemDescription"));
-		dateRecievedColumn.setCellValueFactory(new PropertyValueFactory<InventoryItem, String>("dateRecieved"));
+		dateReceivedColumn.setCellValueFactory(new PropertyValueFactory<InventoryItem, String>("dateReceived"));
 		dateEnteredColumn.setCellValueFactory(new PropertyValueFactory<InventoryItem, String>("dateEntered"));
 		itemStorageLocationColumn
 				.setCellValueFactory(new PropertyValueFactory<InventoryItem, String>("itemStorageLocation"));
